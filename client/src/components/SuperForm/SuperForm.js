@@ -251,7 +251,7 @@ const SuperForm = ({
           <Button fullWidth important type='submit' value='submit' disabled={isSubmitting}>
             {isSubmitting ? "Please wait" : (props.submitText || "Save")}
           </Button>
-          <Button 
+          {!props.noCancelButton && <Button 
             fullWidth 
             type='button' 
             onClick={isEditView 
@@ -260,7 +260,7 @@ const SuperForm = ({
             }
           >
             {props.cancelText || "Cancel"}
-          </Button>                              
+          </Button> }                             
         </FlexSection>
       }
     </Form>  
