@@ -1,0 +1,28 @@
+{
+  "name": "c6-superheros",
+  "version": "1.0.1",
+  "description": "EvolveU Cohort 6 Project 3.",
+  "main": "index.js",
+  "engines": {
+    "node": "14.x"
+  },
+  "scripts": {
+    "install-server": "cd server && npm install && cd ..",
+    "install-client": "cd client && npm install && cd ..",
+    "build-client": "cd client && npm run build && cd ..",
+    "start-server": "cd server && npm start",
+    "install": "npm run install-server && npm run install-client",
+    "build": "npm run build-client",
+    "start": "npm run start-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EvolveU-FSD/c6-superheros.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EvolveU-FSD/c6-superheros/issues"
+  },
+  "homepage": "https://github.com/EvolveU-FSD/c6-superheros#readme"
+}
