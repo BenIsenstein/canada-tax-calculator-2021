@@ -5,12 +5,13 @@ let printDollarAmount = amount => {
     
     if (!cents) cents = '0'
     
-    dollars = dollars
+    dollars = (dollars
         .split('')
         .reverse()
         .map((digit, index) => index%3===0 && index!==0 ? `${digit}, ` : digit)
         .reverse()
         .join('')
+    )
     
     
     return `$${dollars}.${cents}`

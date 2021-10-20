@@ -1,5 +1,5 @@
 import styled, {css} from 'styled-components'
-import {fadeIn} from './'
+import { fadeIn, slideInLeft } from './'
 
 const FlexSection = styled.div`
     display: flex;
@@ -8,6 +8,10 @@ const FlexSection = styled.div`
 
     ${props => props.alignStart && css`
         align-items: flex-start;
+    `}
+
+    ${props => props.alignCenter && css`
+        align-items: center;
     `}
 
     ${props => props.alignEnd && css`
@@ -42,6 +46,10 @@ const FlexSection = styled.div`
         width: 100%;
     `}
 
+    ${props => props.fullHeight && css`
+        height: 100%;
+    `}
+
     ${props => props.marginTop1em && css`
         margin-top: 1em;
     `}
@@ -70,6 +78,14 @@ const FlexSection = styled.div`
     ${props => props.fadeIn && css`
         animation: ${fadeIn} 0.4s linear;
     `}
+
+    ${props => props.slideInLeft && css`
+        animation: ${slideInLeft} 1s ease-out;
+    `}
+
+    ${props => props.extraCss && css`${props.extraCss(props)}`}
+
+
 
     @media (min-width: ${props => props.theme.smScreen}) {
         ${props => props.gridColumn && css`

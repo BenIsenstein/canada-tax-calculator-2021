@@ -31,7 +31,7 @@ const Button = styled.button.attrs(props => ({
         transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
         width: 50px;
         z-index: -10;
-      }
+    }
 
     &:hover {
         border: 1px solid ${props => props.theme.prmDk};
@@ -44,11 +44,11 @@ const Button = styled.button.attrs(props => ({
     }
 
     ${props => props.important && css`
-        background: ${props => props.theme.prm};
+        background: ${props.theme.prm};
         color: white;
 
         &:hover {
-            background: ${props => props.theme.prmDk};
+            background: ${props.theme.prmDk};
             color: white;
         }
     `}
@@ -129,6 +129,8 @@ const Button = styled.button.attrs(props => ({
             border: none;
         }
     `}
+
+    ${props => props.extraCss && css`${props.extraCss(props)}`}
 `
 
 export {Button}

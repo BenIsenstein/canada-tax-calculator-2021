@@ -7,13 +7,15 @@
     "dev": "nodemon server.js"
   },
   "dependencies": {
-    "bcrpyt": "^2.0.0",
+    "bcrypt": "^5.0.1",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "dotenv": "^9.0.2",
     "express": "~4.16.1",
     "express-session": "^1.17.2",
+    "googleapis": "^39.2.0",
     "http-errors": "~1.6.3",
+    "mimetext": "^1.0.1",
     "mongoose": "^5.11.11",
     "morgan": "~1.9.1",
     "passport": "^0.4.1",

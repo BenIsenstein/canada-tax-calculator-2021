@@ -11,11 +11,11 @@ const theme = {
     // bkgGradient: 'linear-gradient(180deg, rgba(237, 233, 245, 1) 10%, rgba(247, 245, 252, 1) 100%)',
 
     // neutral blue gray
-    // scd: '#cad3d9',   
-    // scdLt: '#e1e7eb',
-    // lightBkg: '#e1e7eb',
-    // bkgColor: 'rgba(202, 211, 217, 1)',
-    // bkgGradient: 'linear-gradient(180deg, rgba(202, 211, 217, 1) 10%, rgba(240, 244, 247, 1) 100%)',
+    scd: '#cad3d9',   
+    scdLt: '#e1e7eb',
+    lightBkg: '#e1e7eb',
+    bkgColor: 'rgba(202, 211, 217, 1)',
+    bkgGradient: 'linear-gradient(#2f4454 , #2e151b )',
 
     // beige
     // scd: '#f0d4b1',
@@ -25,15 +25,18 @@ const theme = {
     // bkgGradient: 'linear-gradient(180deg, rgba(247, 231, 210, 1) 10%, rgba(250, 240, 227, 1) 100%)',
 
     // neutral blush
-    scd: '#ebcdbe',
-    scdLt: '#f3dbcf',
-    lightBkg: '#fff3ed',
-    bkgColor: 'rgba(255, 243, 237, 1)',
-    bkgGradient: 'linear-gradient(180deg, rgba(255, 243, 237,1) 10%, rgba(237, 250, 255, 1) 100%)',
+    // scd: '#ebcdbe',
+    // scdLt: '#f3dbcf',
+    // lightBkg: '#fff3ed',
+    // bkgColor: 'rgba(255, 243, 237, 1)',
+    // bkgGradient: 'linear-gradient(180deg, rgba(255, 243, 237,1) 10%, rgba(237, 250, 255, 1) 100%)',
+
+
+
     acc: 'rgba(237, 250, 255, 1)',
 
-    bkg: 'white',
-    titleColor: '#6b6b6b',
+    bkg: 'white', //'#483D8B',
+    titleColor: 'white',
     contentColor: '#474747',
 
     // inject fonts here ie. "'Roboto', sans-serif"

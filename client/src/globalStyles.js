@@ -3,6 +3,7 @@ import { createGlobalStyle } from 'styled-components/macro'
 export default createGlobalStyle`
     body {
         background: ${props => props.theme.bkg};
+        overflow: auto;
     }
 
     h1, h2, h3, h4, h5, h6 {

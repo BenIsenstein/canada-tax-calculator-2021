@@ -11,6 +11,17 @@ const slideInTop = keyframes`
   }
 `
 
+const slideInLeft = keyframes`
+  0% {
+    opacity: 0;
+    transform: translateX(-50vw);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+`
+
 const slideInBottom = keyframes`
   0% {
     opacity: 0;
@@ -33,4 +44,4 @@ const fadeIn = keyframes`
 
 //const popup = keyframes``
 
-export {slideInTop, slideInBottom, fadeIn}
+export {slideInTop, slideInBottom, slideInLeft, fadeIn}

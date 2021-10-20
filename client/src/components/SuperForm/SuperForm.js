@@ -95,7 +95,7 @@ const SuperForm = ({
   ...props }) => {
   // - - - - - Handle the most crucial props - - - - -  
   useEffect(() => () => console.log('SuperFormTemplate unmounted!'), [])
-
+  
   if (!formMode) formMode = 'add'
   if (!onSubmit) onSubmit = () => alert('No onSubmit given to <FormTemplate />')
   // - - - - - - - - - - - Hooks - - - - - - - - - - -
@@ -228,11 +228,13 @@ const SuperForm = ({
   if (isAddMode) register('userId', { value: userContext.user?._id })
 
   // - - - - - - RETURN JSX - - - - - - - - - - - //
-  return <FlexSection fullWidth column fadeIn {...props}>
+  return <FlexSection fullWidth column fadeIn {...props} {...props.wrapperProps}>
     {props.BeforeTemplate} 
+    
 
     <FlexSection fullWidth spaceBetween>
       <FormSectionTitle as={props.titleTag}>{props.titleText}</FormSectionTitle>
+      
       {!props.displayOnly && isDetailsMode && <PencilIcon onClick={isEditView ? (props.editViewCancel || resetForm) : (() => setViewMode('edit'))} />}                    
     </FlexSection>
     
@@ -241,7 +243,7 @@ const SuperForm = ({
         inputs={inputs}
         {...modeAndView}
         {...formTools}
-      />
+      />                          
 
       {props.BeforeSubmitButton}
       {isEditView && props.BeforeSubmitButtonIfEditView}
@@ -251,16 +253,18 @@ const SuperForm = ({
           <Button fullWidth important type='submit' value='submit' disabled={isSubmitting}>
             {isSubmitting ? "Please wait" : (props.submitText || "Save")}
           </Button>
-          {!props.noCancelButton && <Button 
+          {!props.noCancelButton && 
+          <Button 
+            important
             fullWidth 
-            type='button' 
             onClick={isEditView 
               ? (props.editViewCancel || resetForm) 
               : (props.addModeCancel || goHome)
             }
+            {...props.cancelButtonProps}
           >
             {props.cancelText || "Cancel"}
-          </Button> }                             
+          </Button> }  
         </FlexSection>
       }
     </Form>  

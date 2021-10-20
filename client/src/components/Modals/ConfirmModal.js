@@ -14,7 +14,7 @@ const ConfirmModal = ({ isConfirmModalShowing, hideConfirmModal, modalContent, c
       <React.Fragment>
         <div className="modal-confirm-overlay"/>
           <div className="modal-confirm-wrapper" aria-modal aria-hidden tabIndex={-1} role="dialog">
-            <div className="modal-confirm">
+            <div className="modal-confirm" style={{background: "#2f4454"}}>
               
               <div className="modal-confirm-header">
                 <button type="button" className="modal-confirm-close-button" data-dismiss="modal" aria-label="Close" onClick={hideConfirmModal}>
@@ -27,7 +27,7 @@ const ConfirmModal = ({ isConfirmModalShowing, hideConfirmModal, modalContent, c
               </FlexSection>
 
               <FlexSection fullWidth justifyCenter marginTop1em>
-                <Button fullWidth onClick={() => {
+                <Button fullWidth important onClick={() => {
                   hideConfirmModal();
                   actionOnConfirm();
                 }}>

@@ -23,7 +23,7 @@ outline: 0;
 
 .modal-confirm {
 z-index: 100;
-background: white;
+background: gray;
 position: relative;
 margin: 6em auto;
 border-radius: 3px;

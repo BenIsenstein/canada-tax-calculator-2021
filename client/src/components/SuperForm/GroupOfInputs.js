@@ -431,7 +431,7 @@ const GroupOfCheckboxes = ({
 const SuperFormSelect = ({ options, name, ...props }) => { 
   // *SuperFormSelect needs to have "isCustomComponent" set to true.*
   const allProps = {
-    ...props.register(name, props.registerOptions), 
+    ...props.register && props.register(name, props.registerOptions), 
     ...props,
     name: name,
     id: name

@@ -2,14 +2,12 @@ import styled, {css} from 'styled-components'
 import {fadeIn} from './'
 
 const PageContainer = styled.div`
-    width: 95%;
     min-height: 90vh;
     margin: 0 0 1.4em 0;
     padding: .5em;
     background-color: ${props => props.theme.bkg};
     border-radius: 10px;
     animation: ${fadeIn} 0.4s linear;
-    overflow: auto;
 
     ${props => props.flexColumn && css`
         display: flex;
@@ -27,8 +25,10 @@ const PageContainer = styled.div`
         min-height: 80vh;
     `}      
 
+    ${props => props.extraCss && css`${props.extraCss(props)}`}
+
     @media (min-width: ${props => props.theme.smScreen}) {
-        width: 75vw;
+        width: 90%;
         padding: 1.4em;
     }
 `
